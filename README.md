@@ -2,6 +2,14 @@
 
 一个现代化的在线密码生成器，帮助用户快速生成安全、强度可控的随机密码。
 
+## 🌐 在线预览
+
+**[👉 立即体验](https://chenzhenyuan.com/products/password-generator/)**
+
+## 📸 预览
+
+![密码生成器预览](./short.png)
+
 ## ✨ 功能特性
 
 ### 核心功能
