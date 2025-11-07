@@ -41,7 +41,7 @@ function Generator() {
   const copyPassword = () => {
     navigator.clipboard.writeText(password);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    setTimeout(() => setCopied(false), 1000);
   };
 
 
@@ -59,7 +59,7 @@ function Generator() {
           />
           <StrengthMeter level={strength.level} text={strength.text} color={strength.color} />
           <button onClick={copyPassword} className={`${styles.copyButton} ${copied ? styles.copied : ''}`}>
-            {copied ? '复制成功 ✓' : '复制密码'}
+            {copied ? '复制成功 ✓' : '复制密码 ♲'}
           </button>
         </div>
       )}
