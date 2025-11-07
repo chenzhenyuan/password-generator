@@ -37,11 +37,13 @@ function Generator() {
 
   const [copied, setCopied] = useState(false);
   const rangeRef = useRef<HTMLInputElement | null>(null);
+  const timerRef = useRef<number | null>(null);
 
   const copyPassword = () => {
     navigator.clipboard.writeText(password);
     setCopied(true);
-    setTimeout(() => setCopied(false), 1000);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = window.setTimeout(() => setCopied(false), 1000);
   };
 
 
