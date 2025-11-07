@@ -1,0 +1,30 @@
+/* Global reset and layout fixes to prevent unnecessary scrollbars */
+/* Ensure box-sizing includes padding/border so 100vh includes padding and avoids overflow */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  /* prevent horizontal scrollbars caused by slight overflows */
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Make images and other media responsive */
+img, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Utility to avoid accidental oversize elements */
+.container-fixed {
+  max-width: 100%;
+  overflow: hidden;
+}
